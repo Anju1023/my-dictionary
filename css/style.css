@@ -1,0 +1,174 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 10px;
+  color: rgb(60, 29, 24);
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  position: relative;
+  font-size: 3rem;
+  color: rgb(122, 81, 75);
+  font-weight: 550;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+}
+h2::before {
+  content: "";
+  position: absolute;
+  top: 0.25rem;
+  left: -1rem;
+  width: 5px;
+  height: 4rem;
+  background-color: rgb(255, 113, 74);
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 450;
+  padding: 1.8rem;
+  margin: 2rem 0;
+  background-color: rgb(255, 113, 74);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h3 .fa-pencil {
+  padding-left: 1rem;
+  margin-right: 1rem;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.5rem 1rem;
+  margin: 2rem 1rem;
+  border-top: 2px solid rgb(255, 113, 74);
+  border-bottom: 2px solid rgb(255, 113, 74);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-size: 1.7rem;
+  font-weight: 350;
+  line-height: 1.6;
+  margin: 1rem;
+}
+p span {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(247, 49, 35);
+}
+
+pre {
+  display: inline-block;
+  width: 80%;
+}
+pre code {
+  border-radius: 5px;
+  font-size: 1.7rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.header .header_left h1 #dic {
+  font-weight: 550;
+  color: rgb(122, 81, 75);
+}
+.header .header_left h1 .fa-book-open {
+  color: rgb(255, 113, 74);
+  margin-left: 1rem;
+}
+.header .header_right .fa-circle-up {
+  color: rgb(122, 81, 75);
+  font-size: 3rem;
+}
+
+.main {
+  margin-top: 5rem;
+}
+.main section .container {
+  background-color: #fff;
+}/*# sourceMappingURL=style.css.map */
