@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>はじめてのDictionary</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css"
@@ -66,8 +66,8 @@
               </button>
               <pre>
                 <code id="dim" class="vbnet">
-                  Dim 変数名 As Object
-                  Set 変数名 = CreateObject("Scripting.Dictionary")
+      Dim 変数名 As Object
+      Set 変数名 = CreateObject("Scripting.Dictionary")
                 </code>
               </pre>
             </div>
@@ -88,7 +88,7 @@
                 </button>
                 <pre>
                   <code class="vbnet">
-                    変数名.Add Key,Item
+      変数名.Add Key,Item
                   </code>
                 </pre>
               </div>
@@ -99,15 +99,15 @@
                 </button>
                 <pre>
                   <code id="addEx" class="vbnet">
-Sub フルーツDictionary()
-    Dim Fruits As Object
-    Set Fruits = CreateObject("Scripting.Dictionary")
+      Sub フルーツDictionary()
+          Dim Fruits As Object
+          Set Fruits = CreateObject("Scripting.Dictionary")
 
-    Fruits.Add "りんご", 100
-    Fruits.Add "みかん", 130
-    Fruits.Add "メロン", 300
-End Sub
-                </code>
+          Fruits.Add "りんご", 100
+          Fruits.Add "みかん", 130
+          Fruits.Add "メロン", 300
+      End Sub
+                  </code>
                 </pre>
               </div>
               <p>
@@ -126,14 +126,14 @@ End Sub
                 </button>
                 <pre>
                   <code id="addEx2" class="vbnet">
-                    Sub フルーツDictionary()
-                        Dim Fruits As Object
-                        Set Fruits = CreateObject("Scripting.Dictionary")
-                
-                        Fruits.Add "りんご", Array(100, 3) '←Arrayを使って複数アイテムを追加！
-                        Fruits.Add "みかん", Array(130, 5)
-                        Fruits.Add "メロン", Array(300, 2)
-                    End Sub
+      Sub フルーツDictionary()
+          Dim Fruits As Object
+          Set Fruits = CreateObject("Scripting.Dictionary")
+  
+          Fruits.Add "りんご", Array(100, 3) '←Arrayを使って複数アイテムを追加！
+          Fruits.Add "みかん", Array(130, 5)
+          Fruits.Add "メロン", Array(300, 2)
+      End Sub
                   </code>
                 </pre>
               </div>
@@ -153,23 +153,25 @@ End Sub
                 </button>
                 <pre>
                   <code id="keysEx" class="vbnet">
-                        Dim i As Long, FruitsList As Variant
-                        FruitsList = Fruits.Keys
-                
-                        For i = LBound(FruitsList) To UBound(FruitsList)
-                            Debug.Print FruitsList(i)
-                        Next i
+      Dim i As Long, FruitsList As Variant
+      FruitsList = Fruits.Keys
+
+      For i = LBound(FruitsList) To UBound(FruitsList)
+          Debug.Print FruitsList(i)
+      Next i
                   </code>
                 </pre>
               </div>
               <p>イミディエイトウィンドウを確認してみると、、、？</p>
-              <pre>
-                <code id="keysExPrint" class="vbnet">
-                  りんご
-                  みかん
-                  メロン
-                </code>
-              </pre>
+              <div class="code-block">
+                <pre>
+                  <code id="keysExPrint" class="vbnet">
+                    りんご
+                    みかん
+                    メロン
+                  </code>
+                </pre>
+              </div>
               <p>無事にフルーツリストが出力されました！</p>
             </div>
             <div class="how-to_method_foreach">
@@ -190,10 +192,10 @@ End Sub
                 </button>
                 <pre>
                   <code id="foreachHowto" class="vbnet">
-                        Dim キー As Variant
-                        For Each キー In 配列やオブジェクト
-                            処理
-                        Next キー
+      Dim キー As Variant
+      For Each キー In 配列やオブジェクト
+          処理
+      Next キー
                   </code>
                 </pre>
               </div>
@@ -206,12 +208,12 @@ End Sub
                 </button>
                 <pre>
                   <code id="foreachEx" class="vbnet">
-                        Dim k As Variant, FruitsList As Variant
-                        FruitsList = Fruits.Keys
-                
-                        For Each k In FruitsList
-                            Debug.Print k
-                        Next k
+      Dim k As Variant, FruitsList As Variant
+      FruitsList = Fruits.Keys
+
+      For Each k In FruitsList
+          Debug.Print k
+      Next k
                   </code>
                 </pre>
               </div>
@@ -230,28 +232,28 @@ End Sub
                 </button>
                 <pre>
                   <code id="exists" class="vbnet">
-                    Sub パンDictionary()
-                        Dim ws As Worksheet
-                        Dim Pans As Object
-                        Set ws = Worksheets("売上")
-                        Set Pans = CreateObject("Scripting.Dictionary")
-                
-                        Dim panName As String, panPrice As Long, panQty As Long
-                        Dim lastRow As Long, i As Long
-                        With ws
-                            lastRow = .Cells(.Rows.Count, 1).End(xlUp).Row
-                
-                            For i = 2 To lastRow
-                                panName = .Cells(i, 1).Value
-                                panPrice = .Cells(i, 2).Value
-                                panQty = .Cells(i, 3).Value
-                
-                                If Not Pans.Exists(panName) Then
-                                    Pans.Add panName, Array(panPrice, panQty)
-                                End If
-                            Next i
-                        End With
-                    End Sub
+      Sub パンDictionary()
+          Dim ws As Worksheet
+          Dim Pans As Object
+          Set ws = Worksheets("売上")
+          Set Pans = CreateObject("Scripting.Dictionary")
+  
+          Dim panName As String, panPrice As Long, panQty As Long
+          Dim lastRow As Long, i As Long
+          With ws
+              lastRow = .Cells(.Rows.Count, 1).End(xlUp).Row
+  
+              For i = 2 To lastRow
+                  panName = .Cells(i, 1).Value
+                  panPrice = .Cells(i, 2).Value
+                  panQty = .Cells(i, 3).Value
+  
+                  If Not Pans.Exists(panName) Then
+                      Pans.Add panName, Array(panPrice, panQty)
+                  End If
+              Next i
+          End With
+      End Sub
                   </code>
                 </pre>
               </div>
@@ -276,12 +278,12 @@ End Sub
                 </button>
                 <pre>
                   <code id="item" class="vbnet">
-                    Dim k As Variant, PansList As Variant
-                    PansList = Pans.Keys
-                
-                    For Each k In PansList
-                        Debug.Print k, Pans(k)(0), Pans(k)(1)
-                    Next k
+      Dim k As Variant, PansList As Variant
+      PansList = Pans.Keys
+  
+      For Each k In PansList
+          Debug.Print k, Pans(k)(0), Pans(k)(1)
+      Next k
                   </code>
                 </pre>
               </div>
@@ -306,6 +308,6 @@ End Sub
     <script>
       hljs.highlightAll();
     </script>
-    <script src="js/script.js"></script>
+    <script src="/src/js/script.js"></script>
   </body>
 </html>
