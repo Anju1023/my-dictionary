@@ -209,4 +209,41 @@ p span {
 }
 .footer .container {
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header .container .header_right {
+    display: none;
+  }
+  .code-block {
+    width: 95%;
+  }
+  .code-block pre {
+    width: 100%;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 9px;
+  }
+  .container {
+    padding: 1.5rem;
+  }
+  .header_right .fa-circle-up {
+    font-size: 2.5rem;
+  }
+  .main {
+    margin-top: 7rem;
+  }
 }/*# sourceMappingURL=style.css.map */
