@@ -16,7 +16,7 @@ function copyCode(btn) {
 }
 
 document.querySelector('a[href="#page-top"]').addEventListener('click', e => {
-  e.preventDehault();
+  e.preventDefault();
 
   const target = document.querySelector('#page-top');
   target.scrollIntoView({
