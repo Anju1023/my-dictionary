@@ -14,3 +14,12 @@ function copyCode(btn) {
     }, 1500);
   });
 }
+
+document.querySelector('a[href="#page-top"]').addEventListener('click', e => {
+  e.preventDehault();
+
+  const target = document.querySelector('#page-top');
+  target.scrollIntoView({
+    behavior: 'smooth',
+  });
+});
