@@ -3,16 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>はじめてのDictionary</title>
+    <meta name="description" content="VBAのDictionary（辞書型）オブジェクトの使い方を初心者向けに分かりやすく解説。宣言、メソッド、プロパティの使い方を実例で学習。" />
+    <title>はじめてのDictionary | VBA辞書型オブジェクト完全ガイド</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
     />
+    
+    <!-- Icons -->
     <script
       src="https://kit.fontawesome.com/768bdb2b98.js"
       crossorigin="anonymous"
     ></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
   </head>
 
   <body>
@@ -33,23 +46,52 @@
     <main class="main">
       <section class="explain">
         <div class="container">
-          <h2>Dictionaryってなに？</h2>
-          <p>
-            データとキーをセットで格納するオブジェクトのこと。<br />
-            辞書のようなもので、<span>連想配列</span>とも呼ばれています。
-          </p>
-          <p>
-            配列はインデックス番号と要素の値がセットなのに対して、連想配列は<span>キー(Key)</span>と<span>データ(Item)</span>がセットになります。
-          </p>
-          <p>
-            キーは文字列でも数値でもOK！<br />
-            でも重複は絶対NG！！
-          </p>
+          <div class="progress-indicator">
+            <span class="step active">基本概念</span>
+            <span class="step">使い方</span>
+            <span class="step">実践例</span>
+          </div>
+          
+          <h2><i class="fa-solid fa-lightbulb"></i> Dictionaryってなに？</h2>
+          
+          <div class="concept-grid">
+            <div class="concept-card">
+              <div class="concept-icon">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3>データ構造</h3>
+              <p>
+                データとキーをセットで格納するオブジェクトのこと。<br />
+                辞書のようなもので、<span>連想配列</span>とも呼ばれています。
+              </p>
+            </div>
+            
+            <div class="concept-card">
+              <div class="concept-icon">
+                <i class="fa-solid fa-key"></i>
+              </div>
+              <h3>キーとアイテム</h3>
+              <p>
+                配列はインデックス番号と要素の値がセットなのに対して、連想配列は<span>キー(Key)</span>と<span>データ(Item)</span>がセットになります。
+              </p>
+            </div>
+            
+            <div class="concept-card">
+              <div class="concept-icon">
+                <i class="fa-solid fa-exclamation-triangle"></i>
+              </div>
+              <h3>重要なルール</h3>
+              <p>
+                キーは文字列でも数値でもOK！<br />
+                でも重複は絶対NG！！
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="how-to">
         <div class="container">
-          <h2>Dictionaryの使い方</h2>
+          <h2><i class="fa-solid fa-code"></i> Dictionaryの使い方</h2>
           <div class="how-to_dim">
             <h3>
               <span><i class="fa-solid fa-pencil"></i></span>宣言
@@ -301,7 +343,21 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <p>侑太がんばろおお！！！！</p>
+        <div class="footer-content">
+          <div class="footer-message">
+            <i class="fa-solid fa-heart"></i>
+            <p>侑太がんばろおお！！！！</p>
+          </div>
+          <div class="footer-links">
+            <a href="#page-top">
+              <i class="fa-solid fa-arrow-up"></i>
+              トップに戻る
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Dictionary Tutorial. Made with ❤️ for learning VBA.</p>
+        </div>
       </div>
     </footer>
 
